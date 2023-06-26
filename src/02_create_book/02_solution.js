@@ -16,7 +16,7 @@ createBook.getInfo = function () {
 };
 
 createBook.getPrice = function () {
-  return `${this.price}`;
+  return this.price;
 };
 
 createBook.addRating = function (rating) {
@@ -24,9 +24,9 @@ createBook.addRating = function (rating) {
 };
 
 createBook.getRating = function (rating) {
-  this.rating.length(rating);
+  this.rating.length;
 };
-let bookCreate = new createBook(1, 'Wonder', 'R.J. Palacio', '$10', '*');
+let bookCreate = new createBook(1, 'Wonder', 'R.J. Palacio', '$10', ['*', '*']);
 console.log(bookCreate.getInfo());
 console.log(bookCreate.getPrice());
 console.log(bookCreate.addRating());
