@@ -23,7 +23,11 @@ createBook.addRating = function (rating) {
   this.rating.push(rating);
 };
 
+createBook.getRating = function (rating) {
+  this.rating.length(rating);
+};
 let bookCreate = new createBook(1, 'Wonder', 'R.J. Palacio', '$10', '*');
 console.log(bookCreate.getInfo());
 console.log(bookCreate.getPrice());
 console.log(bookCreate.addRating());
+console.log(bookCreate.getRating());
