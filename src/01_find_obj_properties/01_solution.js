@@ -13,3 +13,8 @@ person.name = 'John';
 person.age = '23';
 person.city = 'NY';
 console.log(findObjPropsHasOwn(person));
+
+let findObjKeys = function (object) {
+  let properties = Object.keys(object);
+  return properties.join(', ');
+};
