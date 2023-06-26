@@ -5,7 +5,7 @@ function createBook(id, title, author, price, rating) {
   this.title = title;
   this.author = author;
   this.price = price;
-  let rating = ['*', '*', '*', '*', '*'];
+  this.rating = rating;
   this.getInfo = function () {
     return `${this.title} by ${this.author}`; }
   this.getPrice = function() {
