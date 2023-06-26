@@ -1,18 +1,23 @@
 // Code your solution here
 /* eslint-disable no-unused-vars, no-prototype-builtins */
-function createBook(id, title, author, price, rating) {
-  this.id = id;
-  this.title = title;
-  this.author = author;
-  this.price = price;
-  this.rating = rating;
-  this.getInfo = function () {
-    return `${this.title} by ${this.author}`; }
-  this.getPrice = function() {
-    return `${this.price}`; }
-  };
+function createBook(id, title, author, price) {
+  let Book = Object.create(createBook);
 
-let book 1 = new createBook(1, 'The Great Gatsby','F. Scott Fitzgerald', '$20', ['*','*'])
-createBook.prototype.getInfo(title, author);
-createBook.prototype.getPrice(price);
+  Book.id = id;
+  Book.title = title;
+  Book.author = author;
+  Book.price = price;
+  return Book;
+}
 
+createBook.getInfo = function () {
+  return `${this.title} by ${this.author}`;
+};
+
+createBook.getPrice = function () {
+  return `${this.price}`;
+};
+
+let bookCreate = new createBook(1, 'Wonder', 'R.J. Palacio', '$10');
+console.log(bookCreate.getInfo());
+console.log(bookCreate.getPrice());
