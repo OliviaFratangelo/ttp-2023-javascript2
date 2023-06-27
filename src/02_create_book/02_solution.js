@@ -23,11 +23,19 @@ createBook.addRating = function (rating) {
   this.rating.push(rating);
 };
 
-createBook.getRating = function (rating) {
-  this.rating.length;
+createBook.getRating = function () {
+  let sum = 0;
+  for (let i = 0; i < this.rating.length; i++) {
+    sum += this.rating[i].length;
+  }
+  return sum / this.rating.length;
 };
-let bookCreate = new createBook(1, 'Wonder', 'R.J. Palacio', '$10', ['*', '*']);
+
+let bookCreate = new createBook(1, 'Wonder', 'R.J. Palacio', '$10', [
+  '*',
+  '***',
+]);
 console.log(bookCreate.getInfo());
 console.log(bookCreate.getPrice());
-console.log(bookCreate.addRating());
+console.log(bookCreate.addRating(`${this.rating}`));
 console.log(bookCreate.getRating());
