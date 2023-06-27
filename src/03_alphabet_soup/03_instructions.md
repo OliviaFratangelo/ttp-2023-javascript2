@@ -17,3 +17,9 @@ soup(phrase, bank); // returns false;
 
 The first argument is a phrase, the second argument is a character bank. The soup function returns `true` if there are enough characters in the character bank to complete
 the phrase and it returns `false` if there are not enough characters in the character bank to complete the phrase.
+
+let soup = function(phrase, bank) {
+if(bank.lengt < phrase.length) {
+return(false);
+}
+}
